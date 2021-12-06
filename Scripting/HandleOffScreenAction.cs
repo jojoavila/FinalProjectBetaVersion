@@ -31,24 +31,24 @@ namespace final_project.Scripting
                 platformList.Remove(plat);
             }
 
-            List<Actor> groundList = cast["ground"];
-            List<Actor> groundToRemove = new List<Actor>();
-            foreach (Actor actor in groundList)
-            {
-                Ground ground = (Ground)actor;
-                int x = ground.GetX();
-                int y = ground.GetY();
-                if (y >= Constants.MAX_Y)
-                {
-                    // _audioService.PlaySound(Constants.SOUND_OVER);
-                    platformToRemove.Add(ground);
-                }
+            // List<Actor> groundList = cast["ground"];
+            // List<Actor> groundToRemove = new List<Actor>();
+            // foreach (Actor actor in groundList)
+            // {
+            //     Ground ground = (Ground)actor;
+            //     int x = ground.GetX();
+            //     int y = ground.GetY();
+            //     if (y >= Constants.MAX_Y)
+            //     {
+            //         // _audioService.PlaySound(Constants.SOUND_OVER);
+            //         platformToRemove.Add(ground);
+            //     }
                                
-            }
-            foreach (Ground ground in groundToRemove)
-            {
-                groundList.Remove(ground);
-            }
+            // }
+            // foreach (Ground ground in groundToRemove)
+            // {
+            //     groundList.Remove(ground);
+            // }
 
             List<Actor> heroList = cast["hero"];
             List<Actor> heroToRemove = new List<Actor>();
@@ -60,11 +60,11 @@ namespace final_project.Scripting
                 if (y >= Constants.MAX_Y)
                 {
                     // _audioService.PlaySound(Constants.SOUND_OVER);
-                    platformToRemove.Add(hero);
+                    heroToRemove.Add(hero);
                 }
                                
             }
-            foreach (Ground hero in heroToRemove)
+            foreach (Hero hero in heroToRemove)
             {
                 heroList.Remove(hero);
             }

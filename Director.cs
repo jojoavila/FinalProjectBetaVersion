@@ -16,11 +16,20 @@ namespace final_project
        private bool _keepPlaying = true;
         private Dictionary<string, List<Actor>> _cast;
         private Dictionary<string, List<Action>> _script;
+        private List<Actor> _hero = new List<Actor>();
+        
+        int _countHero;
 
         public Director(Dictionary<string, List<Actor>> cast, Dictionary<string, List<Action>> script)
         {
             _cast = cast;
-            _script = script;
+            _script = script;  
+            List<Actor> heroList = cast["hero"];   
+            foreach (Actor actor in heroList)
+            {
+                Hero hero = (Hero)actor;
+                _hero.Add(hero);
+            }
         }
 
         /// <summary>
@@ -34,7 +43,7 @@ namespace final_project
                 CueAction("update");
                 CueAction("output");
 
-                if (Raylib_cs.Raylib.WindowShouldClose())
+                if ( _cast["hero"].Count == 0 || Raylib_cs.Raylib.WindowShouldClose())
                 {
                     _keepPlaying = false;
                 }
@@ -56,5 +65,6 @@ namespace final_project
                 action.Execute(_cast);
             }
         }
+        
     }
 }
