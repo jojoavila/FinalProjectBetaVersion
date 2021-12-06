@@ -18,7 +18,6 @@ namespace final_project
         private Dictionary<string, List<Action>> _script;
         private List<Actor> _hero = new List<Actor>();
         
-        int _countHero;
 
         public Director(Dictionary<string, List<Actor>> cast, Dictionary<string, List<Action>> script)
         {

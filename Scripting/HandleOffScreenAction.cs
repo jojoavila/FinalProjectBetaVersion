@@ -57,7 +57,7 @@ namespace final_project.Scripting
                 Hero hero = (Hero)actor;
                 int x = hero.GetX();
                 int y = hero.GetY();
-                if (y >= Constants.MAX_Y)
+                if (y >= Constants.MAX_Y + 100)
                 {
                     // _audioService.PlaySound(Constants.SOUND_OVER);
                     heroToRemove.Add(hero);
