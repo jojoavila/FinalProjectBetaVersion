@@ -57,6 +57,10 @@ namespace final_project
             // Ground (a little help when starting to play)
             cast["ground"] = new List<Actor>();
 
+            cast["scoreBoard"]= new List<Actor>();
+            ScoreBoard _scoreBoard = new ScoreBoard();
+            cast["scoreBoard"].Add(_scoreBoard);
+
             Ground ground = new Ground();
             //cast["ground"].Add(ground);
 

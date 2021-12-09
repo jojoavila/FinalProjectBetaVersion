@@ -11,6 +11,7 @@ namespace final_project.Scripting
     {
         PhysicsService _physicsService = new PhysicsService();
         AudioService _audioService = new AudioService();
+        private bool canBounce = true;
         public HandleCollisionsAction(PhysicsService physicsService)
         {
             _physicsService = physicsService;
@@ -20,30 +21,28 @@ namespace final_project.Scripting
         {
             List<Actor> heroList = cast["hero"];
             List<Actor> platformList = cast["platform"];
+            Actor scoreBoard = cast["scoreBoard"][0];
             //Actor ground = cast["ground"][0];
 
             foreach (Actor actor in heroList)
             {
+                ScoreBoard _scoreBoard = (ScoreBoard)scoreBoard;
                 Hero hero = (Hero)actor;
                 int x = hero.GetX();
                 int y = hero.GetY();
-                //int x_ground = ground.GetX();
-                //int y_ground = ground.GetY();
-                
-                // if (_physicsService.IsCollision(ground, hero))
-                // {
-                //     hero.BounceVertical();
-                // }
-                // hero.DownwardDirectionByVariable();                
+                               
             
                 foreach (Actor platform in platformList)
                 {
                                      
-                    if (_physicsService.IsCollision(platform, hero))
+                    if (_physicsService.IsCollision(platform, hero) && canBounce)
                     {
                         hero.BounceVertical();
+                        _audioService.PlaySound(Constants.SOUND_BOUNCE);
+                        _scoreBoard.AddPoints(5);
+
                     }
-                    hero.DownwardDirection();                
+                    hero.DownwardDirection();               
                 }
             }
         }

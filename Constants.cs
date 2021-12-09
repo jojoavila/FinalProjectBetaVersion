@@ -15,8 +15,9 @@ namespace final_project
         public const int DEFAULT_FONT_SIZE = 20;
         public const int DEFAULT_TEXT_OFFSET = 4;
 
-        public const string IMAGE_PLATFORM = "./Assets/brick-3.png";
-        public const string IMAGE_HERO = "./Assets/bat.png";
+        public const string IMAGE_PLATFORM = "./Assets/Platform.png";
+        public const string IMAGE_HERO_RIGHT = "./Assets/Doodle-Right.png";
+        public const string IMAGE_HERO_LEFT = "./Assets/Doodle-Left.png";
         public const string IMAGE_GROUND = "./Assets/ball.png";
 
         public const string SOUND_START = "./Assets/start.wav";
@@ -39,8 +40,8 @@ namespace final_project
 
         public const int HERO_SPEED = 6;
 
-        public const int HERO_WIDTH = 15;
-        public const int HERO_HEIGHT = 15;
+        public const int HERO_WIDTH = 40;
+        public const int HERO_HEIGHT = 40;
 
         public const int GROUND_WIDTH = MAX_X;
         public const int GROUND_HEIGHT = 24;

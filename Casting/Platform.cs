@@ -10,10 +10,11 @@ namespace final_project.Casting
         Random randNum = new Random();
         public Platform()
         {
-            SetWidth(48);
-            SetHeight(24);
+            SetWidth(Constants.PLATFORM_WIDTH);
+            SetHeight(Constants.PLATFORM_HEIGHT);
+            SetImage(Constants.IMAGE_PLATFORM);
             
-            int x = randNum.Next(25, Constants.MAX_X - 50);
+            int x = randNum.Next(25, Constants.MAX_X - (Constants.PLATFORM_WIDTH + 10));
             int y = 0;
             
             

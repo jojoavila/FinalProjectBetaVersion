@@ -24,9 +24,12 @@ namespace final_project.Scripting
             int x = _inputService.GetDirection();
             
             Actor hero = cast["hero"][0];
+            Hero doodle = (Hero)hero;
             Point vel = hero.GetVelocity();
             int y = vel.GetY();
-            hero.SetVelocity(new Point(x,y));            
+            //int x = vel.GetX();
+            hero.SetVelocity(new Point(x,y));
+            doodle.NewImage(x);            
         }
     }
 }
