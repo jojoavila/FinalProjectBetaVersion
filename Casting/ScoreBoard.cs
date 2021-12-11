@@ -3,6 +3,8 @@ namespace final_project.Casting
     public class ScoreBoard : Actor
     {
         private int _score = 0;
+        //private bool _canAdd = true;
+        //private int _lastCollision;
         public ScoreBoard()
         {
             _position = new Point(10, 10);
@@ -20,6 +22,7 @@ namespace final_project.Casting
         {
             _score += points;
             UpdateText();
+
         }
 
         /// <summary>

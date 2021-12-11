@@ -33,8 +33,8 @@ namespace final_project
         //public const int PADDLE_X = MAX_X / 2;
         //public const int PADDLE_Y = MAX_Y - 25;
 
-        public const int PLATFORM_WIDTH = 48;
-        public const int PLATFORM_HEIGHT = 24;
+        public const int PLATFORM_WIDTH = 100;
+        public const int PLATFORM_HEIGHT = 35;
 
         public const int PLATFOM_SPEED = 3;
 

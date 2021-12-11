@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using final_project.Casting;
+using final_project_stable_release.Casting;
 
-namespace final_project.Casting
+namespace final_project_stable_release.Casting
 {
     /// <summary>
     /// An action to move all actors forward according to their current velocities.

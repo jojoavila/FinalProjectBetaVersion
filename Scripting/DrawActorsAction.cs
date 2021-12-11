@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using final_project.Casting;
-using final_project.Services;
+using final_project_stable_release.Casting;
+using final_project_stable_release.Services;
 
-namespace final_project.Scripting
+namespace final_project_stable_release.Scripting
 {
     /// <summary>
     /// An action to draw all of the actors in the game.
